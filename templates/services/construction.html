@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}Construction | Nainno Solutions Eswatini{% endblock %}
+
+{% block content %}
+<!-- Service Hero -->
+<section class="py-32 relative overflow-hidden">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="animate-fade-in">
+                <span class="text-neon font-bold uppercase tracking-widest text-sm mb-4 block">Division of Infrastructure</span>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Construction <span class="text-neon">& Engineering</span></h1>
+                <p class="text-slate-400 text-lg mb-8">
+                    Building the physical foundations of Eswatini. From commercial developments to residential projects, we deliver excellence in every square meter.
+                </p>
+                <a href="#contact-cta" class="btn-primary">View Portfolio</a>
+            </div>
+            <div class="animate-fade-in" style="animation-delay: 0.2s;">
+                <img src="{{ url_for('static', filename='images/construction_services.png') }}" alt="Construction Services" class="rounded-2xl glass-card neon-border w-full h-[400px] object-cover">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Services -->
+<section class="py-24 bg-white/5">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Core <span class="text-neon">Capabilities</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">Commercial Building</h4>
+                <p class="text-slate-400">Large-scale office complexes, retail centers, and industrial facilities.</p>
+            </div>
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">Civil Engineering</h4>
+                <p class="text-slate-400">Road construction, drainage systems, and public infrastructure projects.</p>
+            </div>
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">Project Management</h4>
+                <p class="text-slate-400">End-to-end management of construction sites ensuring safety and quality.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process -->
+<section class="py-24">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-16 text-center">Our <span class="text-neon">Project Lifecycle</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="relative text-center">
+                <div class="w-12 h-12 bg-neon text-dark rounded-full flex items-center justify-center font-bold mx-auto mb-4">1</div>
+                <h4 class="font-bold mb-2">Planning</h4>
+                <p class="text-sm text-slate-400">Architectural design and resource allocation.</p>
+            </div>
+            <div class="relative text-center">
+                <div class="w-12 h-12 bg-neon text-dark rounded-full flex items-center justify-center font-bold mx-auto mb-4">2</div>
+                <h4 class="font-bold mb-2">Preparation</h4>
+                <p class="text-sm text-slate-400">Site clearing and foundational work.</p>
+            </div>
+            <div class="relative text-center">
+                <div class="w-12 h-12 bg-neon text-dark rounded-full flex items-center justify-center font-bold mx-auto mb-4">3</div>
+                <h4 class="font-bold mb-2">Execution</h4>
+                <p class="text-sm text-slate-400">Rigorous construction phase with expert supervision.</p>
+            </div>
+            <div class="relative text-center">
+                <div class="w-12 h-12 bg-neon text-dark rounded-full flex items-center justify-center font-bold mx-auto mb-4">4</div>
+                <h4 class="font-bold mb-2">Completion</h4>
+                <p class="text-sm text-slate-400">Interior finishing and final quality handover.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="py-24 bg-neon/5" id="contact-cta">
+    <div class="container mx-auto px-6 text-center">
+        <h3 class="text-2xl font-bold mb-6">Start your next construction project with us.</h3>
+        <p class="text-slate-400 mb-8">Contact our construction division for professional consultations.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:construction@nainnoinvestmentseswatini.com" class="btn-primary">construction@nainnoinvestmentseswatini.com</a>
+            <a href="{{ url_for('quote') }}" class="btn-outline">Request a Quote</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

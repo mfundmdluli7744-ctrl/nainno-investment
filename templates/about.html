@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}About Us | Nainno Solutions Eswatini Pty{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="py-32 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent"></div>
+    <div class="container mx-auto px-6 relative z-10 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">About <span class="text-neon">Us</span></h1>
+        <p class="text-slate-400 max-w-2xl mx-auto text-lg animate-fade-in" style="animation-delay: 0.1s;">
+            Leading the charge in Eswatini's industrial and digital transformation through strategic investment and operational excellence.
+        </p>
+    </div>
+</section>
+
+<!-- Company Profile -->
+<section class="py-24">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="animate-fade-in">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200" alt="Corporate Building" class="rounded-2xl glass-card neon-border w-full h-[500px] object-cover">
+            </div>
+            <div class="animate-fade-in" style="animation-delay: 0.2s;">
+                <h2 class="text-3xl font-bold mb-6">Building a Resilient <span class="text-neon">Future</span></h2>
+                <div class="space-y-6 text-slate-300">
+                    <p>
+                        Nainno Investment Eswatini Pty is a premier multi-division investment company headquartered in Manzini. We have established ourselves as a cornerstone of the Eswatini economy, providing critical services that power both government and private sectors.
+                    </p>
+                    <p>
+                        Our diverse portfolio spans IT infrastructure, complex logistics, large-scale construction, pharmaceutical distribution, premium stationery supplies, cutting-edge cyber security, and industrial-scale commercial agriculture. This multi-faceted approach allows us to provide comprehensive, end-to-end solutions for our clients, ensuring consistency and quality at every touchpoint.
+                    </p>
+                    <div class="p-6 glass-card neon-border bg-neon/5 italic">
+                        "We believe Eswatini's future is built by Swati hands, driven by innovation, and secured by local excellence."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission / Vision / Values -->
+<section class="py-24 bg-white/5">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass-card text-center">
+                <div class="w-16 h-16 bg-neon/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-neon/30">
+                    <svg class="w-8 h-8 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+                <p class="text-slate-400">
+                    To deliver innovative, high-quality solutions that empower organizations across Eswatini to achieve their full potential while contributing to national development.
+                </p>
+            </div>
+
+            <div class="glass-card text-center">
+                <div class="w-16 h-16 bg-neon/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-neon/30">
+                    <svg class="w-8 h-8 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
+                <p class="text-slate-400">
+                    To be the leading investment partner in Eswatini, recognized globally for excellence, ethical business practices, and transformative industrial impact.
+                </p>
+            </div>
+
+            <div class="glass-card text-center">
+                <div class="w-16 h-16 bg-neon/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-neon/30">
+                    <svg class="w-8 h-8 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04M12 10a2 2 0 100 4 2 2 0 000-4z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Our Values</h3>
+                <p class="text-slate-400">
+                    Integrity, Innovation, Excellence, and Community Empowerment guide every decision and action we take across all our divisions.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Impact Statement -->
+<section class="py-24">
+    <div class="container mx-auto px-6 text-center">
+        <div class="max-w-4xl mx-auto glass-card neon-border p-12">
+            <h2 class="text-3xl font-bold mb-6">Our Impact</h2>
+            <p class="text-xl text-slate-300 leading-relaxed">
+                "At Nainno Investment, we don't just measure success by profits, but by the progress we bring to our community. From digitizing schools to building sustainable infrastructure, our footprint is part of Eswatini's journey toward a first-world status."
+            </p>
+            <div class="mt-8">
+                <a href="{{ url_for('contact') }}" class="btn-primary">Connect With Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

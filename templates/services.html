@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Our Services | Nainno Solutions Eswatini Pty{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="py-32 relative overflow-hidden">
+    <div class="container mx-auto px-6 text-center animate-fade-in">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Our <span class="text-neon">Services</span></h1>
+        <p class="text-slate-400 max-w-3xl mx-auto text-lg leading-relaxed">
+            Nainno Investment Eswatini Pty is a diversified powerhouse operating across seven specialized divisions. From futuristic digital solutions and cybersecurity to global logistics and industrial-scale commercial agriculture, we provide integrated excellence designed to fuel Eswatini's growth.
+        </p>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section class="py-24 pt-0">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% set services_list = [
+                ('IT Services', 'it', 'End-to-end IT solutions including infrastructure, software, and support.', url_for('static', filename='images/it_services.png')),
+                ('Logistics', 'logistics', 'Reliable freight, warehousing, and supply chain management.', 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800'),
+                ('Construction', 'construction', 'Professional construction and project management services.', url_for('static', filename='images/construction_services.png')),
+                ('Pharmaceutical', 'pharmaceutical', 'Sourcing and distribution of quality medical supplies.', url_for('static', filename='images/pharmaceutical_services.png')),
+                ('Stationery', 'stationery', 'Comprehensive office supply and printing solutions.', 'https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?q=80&w=800'),
+                ('Cyber Security', 'cybersecurity', 'Protecting organisations from digital threats and audits.', 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800'),
+                ('Agriculture', 'agriculture', 'Commercial livestock and crop production, and agricultural supply.', 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800')
+            ] %}
+
+            {% for title, slug, desc, img_src in services_list %}
+            <div class="glass-card flex flex-col h-full animate-fade-in" style="animation-delay: {{ loop.index0 * 0.1 }}s;">
+                <div class="rounded-xl overflow-hidden mb-6 h-48 border border-white/10">
+                    <img src="{{ img_src }}" alt="{{ title }}" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl font-bold mb-4">{{ title }}</h3>
+                <p class="text-slate-400 mb-8 flex-grow">
+                    {{ desc }}
+                </p>
+                <a href="{{ url_for('service_' + slug) }}" class="btn-outline text-center block w-full">View Details</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Trust Section -->
+<section class="py-24 bg-white/5">
+    <div class="container mx-auto px-6">
+        <div class="glass-card neon-border p-12 text-center">
+            <h2 class="text-3xl font-bold mb-8">Tailored Solutions for <span class="text-neon">Your Success</span></h2>
+            <p class="text-slate-400 max-w-3xl mx-auto text-lg mb-12">
+                Every division at Nainno Investment is led by industry experts dedicated to providing service that exceeds expectations. We don't just provide a service; we build a partnership.
+            </p>
+            <a href="{{ url_for('quote') }}" class="btn-primary">Request a Custom Proposal</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

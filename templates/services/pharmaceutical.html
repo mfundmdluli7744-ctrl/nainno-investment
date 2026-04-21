@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Pharmaceutical | Nainno Solutions Eswatini{% endblock %}
+
+{% block content %}
+<!-- Service Hero -->
+<section class="py-32 relative overflow-hidden">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="animate-fade-in">
+                <span class="text-neon font-bold uppercase tracking-widest text-sm mb-4 block">Division of Healthcare</span>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Pharmaceutical <span class="text-neon">& Medical</span></h1>
+                <p class="text-slate-400 text-lg mb-8">
+                    Ensuring access to quality healthcare. We specialize in the sourcing and professional distribution of medical supplies and pharmaceuticals across the Kingdom.
+                </p>
+                <a href="#contact-cta" class="btn-primary">View Supplies</a>
+            </div>
+            <div class="animate-fade-in" style="animation-delay: 0.2s;">
+                <img src="{{ url_for('static', filename='images/pharmaceutical_services.png') }}" alt="Pharmaceutical Services" class="rounded-2xl glass-card neon-border w-full h-[400px] object-cover">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Services -->
+<section class="py-24 bg-white/5">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Core <span class="text-neon">Solutions</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">Medication Supply</h4>
+                <p class="text-slate-400">Distribution of essential pharmaceuticals to clinics, hospitals, and pharmacies.</p>
+            </div>
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">Medical Equipment</h4>
+                <p class="text-slate-400">Sourcing of advanced diagnostic tools and surgical equipment for healthcare providers.</p>
+            </div>
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">Health Logistics</h4>
+                <p class="text-slate-400">Temperature-controlled transport and storage for sensitive medical products.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Compliance Section -->
+<section class="py-24">
+    <div class="container mx-auto px-6">
+        <div class="glass-card neon-border p-12 text-center">
+            <h2 class="text-3xl font-bold mb-6">Quality <span class="text-neon">Verified</span></h2>
+            <p class="text-slate-400 max-w-2xl mx-auto mb-8">
+                All our pharmaceutical products are sourced from licensed international manufacturers and comply with Eswatini Health Regulatory Authority standards.
+            </p>
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="text-slate-200 font-semibold border-b border-neon">Licensed Facility</div>
+                <div class="text-slate-200 font-semibold border-b border-neon">Cold-Chain Secure</div>
+                <div class="text-slate-200 font-semibold border-b border-neon">Eswatini Complaint</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="py-24 bg-neon/5" id="contact-cta">
+    <div class="container mx-auto px-6 text-center">
+        <h3 class="text-2xl font-bold mb-6">Partner with a reliable healthcare distributor.</h3>
+        <p class="text-slate-400 mb-8">Contact our pharmaceutical division for bulk supply and distribution.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:pharma@nainnoinvestmentseswatini.com" class="btn-primary">pharma@nainnoinvestmentseswatini.com</a>
+            <a href="{{ url_for('quote') }}" class="btn-outline">Request a Quote</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

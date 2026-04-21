@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Request a Quote | Nainno Solutions Eswatini{% endblock %}
+
+{% block content %}
+<section class="py-32 relative overflow-hidden">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16 animate-fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Request a <span class="text-neon">Quote</span></h1>
+            <p class="text-slate-400 max-w-2xl mx-auto">
+                Ready to start your next project? Fill out the form below and our specialists will provide a detailed proposal tailored to your specific requirements.
+            </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto glass-card neon-border animate-fade-in" style="animation-delay: 0.1s;">
+            <form id="quote-form" action="{{ url_for('quote') }}" method="POST">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="full_name">Full Name</label>
+                        <input type="text" id="full_name" name="full_name" placeholder="John Doe" required>
+                    </div>
+                    <div>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+268 7652 6669" required>
+                    </div>
+                    <div>
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company" placeholder="Organization Ltd" required>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label for="service">Interested Service</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Select a Service</option>
+                        <option value="IT Services">IT Services</option>
+                        <option value="Logistics">Logistics</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Pharmaceutical">Pharmaceutical</option>
+                        <option value="Stationery">Stationery</option>
+                        <option value="Cyber Security">Cyber Security</option>
+                    </select>
+                </div>
+
+                <div class="mb-8">
+                    <label for="description">Project Description (Min 20 characters)</label>
+                    <textarea id="description" name="description" rows="6" placeholder="Please describe your requirements in detail..." required minlength="20"></textarea>
+                    <p class="text-xs text-slate-500 mt-2">Briefly explain your needs so we can provide an accurate estimate.</p>
+                </div>
+
+                <button type="submit" class="btn-primary w-full py-4 text-lg">Submit Quote Request</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

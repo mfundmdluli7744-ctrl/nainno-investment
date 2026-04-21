@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}Cyber Security | Nainno Solutions Eswatini{% endblock %}
+
+{% block content %}
+<!-- Service Hero -->
+<section class="py-32 relative overflow-hidden">
+    <!-- Matrix/Digital Decor (Simple CSS) -->
+    <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--accent-cyan)_1px,_transparent_1px)] bg-[length:24px_24px]"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="animate-fade-in">
+                <span class="text-neon font-bold uppercase tracking-widest text-sm mb-4 block">Division of Security</span>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Cyber <span class="text-neon">Security</span></h1>
+                <p class="text-slate-400 text-lg mb-8">
+                    Protecting your digital assets in an ever-evolving threat landscape. We provide advanced monitoring, security audits, and rapid incident response.
+                </p>
+                <a href="#contact-cta" class="btn-primary">Get a Security Audit</a>
+            </div>
+            <div class="animate-fade-in" style="animation-delay: 0.2s;">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop&keywords=cybersecurity" alt="Cyber Security Services" class="rounded-2xl glass-card neon-border w-full h-[400px] object-cover">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Services -->
+<section class="py-24 bg-white/5">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Defensive <span class="text-neon">Solutions</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">Network Security</h4>
+                <p class="text-slate-400">Enterprise-grade firewalls, advanced intrusion detection (IDS/IPS), and military-grade encrypted communication channels.</p>
+            </div>
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">Security Audits</h4>
+                <p class="text-slate-400">Comprehensive compliance assessments and deep-dive vulnerability scans to ensure your infrastructure meets global standards.</p>
+            </div>
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">Threat Monitoring</h4>
+                <p class="text-slate-400">24/7 intelligent perimeter monitoring with AI-driven anomaly detection and automated real-time alert systems.</p>
+            </div>
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">Penetration Testing</h4>
+                <p class="text-slate-400">Aggressive, expert-led ethical hacking simulations to proactively identify and neutralize hidden vulnerabilities before exploit.</p>
+            </div>
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">Cyber Defense</h4>
+                <p class="text-slate-400">Proactive, multi-layered security engineering designed to safeguard critical assets and ensure business resilience against evolving threats.</p>
+            </div>
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">Cyber Attack Mitigation</h4>
+                <p class="text-slate-400">Rapid-response protocols and advanced forensics to contain active breaches, minimize damage, and restore system integrity swiftly.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process -->
+<section class="py-24">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-16 text-center">Our <span class="text-neon">Security Framework</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="relative text-center">
+                <div class="w-12 h-12 bg-neon text-dark rounded-full flex items-center justify-center font-bold mx-auto mb-4">1</div>
+                <h4 class="font-bold mb-2">Identify</h4>
+                <p class="text-sm text-slate-400">Map out all digital assets and potential vulnerabilities.</p>
+            </div>
+            <div class="relative text-center">
+                <div class="w-12 h-12 bg-neon text-dark rounded-full flex items-center justify-center font-bold mx-auto mb-4">2</div>
+                <h4 class="font-bold mb-2">Protect</h4>
+                <p class="text-sm text-slate-400">Implement robust barriers and access controls.</p>
+            </div>
+            <div class="relative text-center">
+                <div class="w-12 h-12 bg-neon text-dark rounded-full flex items-center justify-center font-bold mx-auto mb-4">3</div>
+                <h4 class="font-bold mb-2">Detect</h4>
+                <p class="text-sm text-slate-400">Continuous monitoring for suspicious activities.</p>
+            </div>
+            <div class="relative text-center">
+                <div class="w-12 h-12 bg-neon text-dark rounded-full flex items-center justify-center font-bold mx-auto mb-4">4</div>
+                <h4 class="font-bold mb-2">Respond</h4>
+                <p class="text-sm text-slate-400">Rapid action to mitigate threats and ensure recovery.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="py-24 bg-neon/5" id="contact-cta">
+    <div class="container mx-auto px-6 text-center">
+        <h3 class="text-2xl font-bold mb-6">Don't leave your digital future to chance.</h3>
+        <p class="text-slate-400 mb-8">Contact our cyber security division for a confidential consultation.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:cybersecurity@nainnoinvestmentseswatini.com" class="btn-primary">cybersecurity@nainnoinvestmentseswatini.com</a>
+            <a href="{{ url_for('quote') }}" class="btn-outline">Request a Quote</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

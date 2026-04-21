@@ -1,0 +1,56 @@
+<nav class="sticky top-0 z-50 bg-dark/80 backdrop-blur-xl border-b border-white/10">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="{{ url_for('home') }}" class="flex items-center space-x-3 group">
+            <div class="relative w-12 h-12 overflow-hidden rounded-lg border border-neon/30 group-hover:border-neon transition-colors">
+                <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Nainno Logo" class="w-full h-full object-cover">
+            </div>
+            <div class="flex flex-col">
+                <span class="text-xl font-bold tracking-tight leading-tight">Nainno <span class="text-neon">Solutions</span></span>
+                <span class="text-[10px] uppercase tracking-[0.2em] text-neon opacity-70">Investment Eswatini Pty</span>
+            </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex items-center space-x-8">
+            <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+            <a href="{{ url_for('about') }}" class="nav-link">About</a>
+            
+            <!-- Services Dropdown -->
+            <div class="relative group">
+                <a href="{{ url_for('services') }}" class="nav-link flex items-center">
+                    Services
+                    <svg class="ml-1 w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </a>
+                <div class="absolute left-0 mt-2 w-56 bg-dark border border-white/10 rounded-xl overflow-hidden shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-2 group-hover:translate-y-0">
+                    <a href="{{ url_for('service_it') }}" class="block px-4 py-3 hover:bg-neon/10 hover:text-neon transition">IT Services</a>
+                    <a href="{{ url_for('service_logistics') }}" class="block px-4 py-3 hover:bg-neon/10 hover:text-neon transition">Logistics</a>
+                    <a href="{{ url_for('service_construction') }}" class="block px-4 py-3 hover:bg-neon/10 hover:text-neon transition">Construction</a>
+                    <a href="{{ url_for('service_pharmaceutical') }}" class="block px-4 py-3 hover:bg-neon/10 hover:text-neon transition">Pharmaceutical</a>
+                    <a href="{{ url_for('service_stationery') }}" class="block px-4 py-3 hover:bg-neon/10 hover:text-neon transition">Stationery</a>
+                    <a href="{{ url_for('service_cybersecurity') }}" class="block px-4 py-3 hover:bg-neon/10 hover:text-neon transition">Cyber Security</a>
+                    <a href="{{ url_for('service_agriculture') }}" class="block px-4 py-3 hover:bg-neon/10 hover:text-neon transition">Commercial Agriculture</a>
+                </div>
+            </div>
+
+            <a href="{{ url_for('contact') }}" class="nav-link">Contact</a>
+            <a href="{{ url_for('quote') }}" class="btn-primary px-6 py-2.5">Get a Quote</a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="menu-btn" class="lg:hidden text-white focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-dark border-b border-white/10 p-6">
+        <div class="flex flex-col space-y-6">
+            <a href="{{ url_for('home') }}" class="nav-link text-lg">Home</a>
+            <a href="{{ url_for('about') }}" class="nav-link text-lg">About</a>
+            <a href="{{ url_for('services') }}" class="nav-link text-lg">Services</a>
+            <a href="{{ url_for('contact') }}" class="nav-link text-lg">Contact</a>
+            <a href="{{ url_for('quote') }}" class="btn-primary text-center py-4">Get a Quote</a>
+        </div>
+    </div>
+</nav>

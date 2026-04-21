@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}IT Services | Nainno Solutions Eswatini{% endblock %}
+
+{% block content %}
+<!-- Service Hero -->
+<section class="py-32 relative overflow-hidden">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="animate-fade-in">
+                <span class="text-neon font-bold uppercase tracking-widest text-sm mb-4 block">Division of Innovation</span>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">IT <span class="text-neon">Services</span></h1>
+                <p class="text-slate-400 text-lg mb-8">
+                    Empowering your business with cutting-edge technology solutions. From infrastructure to custom software, we build the digital foundation for your success.
+                </p>
+                <a href="#contact-cta" class="btn-primary">Get Started</a>
+            </div>
+            <div class="animate-fade-in" style="animation-delay: 0.2s;">
+                <img src="{{ url_for('static', filename='images/it_services.png') }}" alt="IT Services" class="rounded-2xl glass-card neon-border w-full h-[400px] object-cover">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Services -->
+<section class="py-24 bg-white/5">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Core <span class="text-neon">Solutions</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">Software Development</h4>
+                <p class="text-slate-400">Custom enterprise applications, web platforms, and mobile solutions designed to streamline complex business operations.</p>
+            </div>
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">Network Engineering</h4>
+                <p class="text-slate-400">Professional design and installation of robust network architectures, including structured cabling and optimized Wi-Fi solutions.</p>
+            </div>
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">Technical Support</h4>
+                <p class="text-slate-400">Expert on-site technician services for computer hardware maintenance, system upgrades, and comprehensive software support.</p>
+            </div>
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">Security & Biometrics</h4>
+                <p class="text-slate-400">Professional installation of biometric access control systems and advanced HD CCTV camera surveillance networks.</p>
+            </div>
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">ICT Consumables</h4>
+                <p class="text-slate-400">Reliable supply of premium ICT essentials, printing materials, and hardware peripherals for individuals and corporate clients.</p>
+            </div>
+            <div class="glass-card">
+                <h4 class="text-xl font-bold mb-4 text-neon">Cloud & Infrastructure</h4>
+                <p class="text-slate-400">Scalable server deployment and cloud integration strategies to build a resilient digital foundation for your organization.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process -->
+<section class="py-24" id="process">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-16 text-center">Our <span class="text-neon">Process</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="relative text-center">
+                <div class="w-12 h-12 bg-neon text-dark rounded-full flex items-center justify-center font-bold mx-auto mb-4">1</div>
+                <h4 class="font-bold mb-2">Audit</h4>
+                <p class="text-sm text-slate-400">Analyzing your current technology landscape.</p>
+            </div>
+            <div class="relative text-center">
+                <div class="w-12 h-12 bg-neon text-dark rounded-full flex items-center justify-center font-bold mx-auto mb-4">2</div>
+                <h4 class="font-bold mb-2">Design</h4>
+                <p class="text-sm text-slate-400">Architecting systems that meet your specific needs.</p>
+            </div>
+            <div class="relative text-center">
+                <div class="w-12 h-12 bg-neon text-dark rounded-full flex items-center justify-center font-bold mx-auto mb-4">3</div>
+                <h4 class="font-bold mb-2">Deploy</h4>
+                <p class="text-sm text-slate-400">Professional implementation with zero downtime.</p>
+            </div>
+            <div class="relative text-center">
+                <div class="w-12 h-12 bg-neon text-dark rounded-full flex items-center justify-center font-bold mx-auto mb-4">4</div>
+                <h4 class="font-bold mb-2">Manage</h4>
+                <p class="text-sm text-slate-400">Ongoing monitoring and proactive maintenance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="py-24 bg-neon/5" id="contact-cta">
+    <div class="container mx-auto px-6 text-center">
+        <h3 class="text-2xl font-bold mb-6">Revolutionize your IT infrastructure today.</h3>
+        <p class="text-slate-400 mb-8">Contact our IT division directly for specialized solutions.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:it@nainnoinvestmentseswatini.com" class="btn-primary">it@nainnoinvestmentseswatini.com</a>
+            <a href="{{ url_for('quote') }}" class="btn-outline">Request a Quote</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

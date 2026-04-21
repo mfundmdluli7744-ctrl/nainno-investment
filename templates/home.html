@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Nainno Solutions Eswatini Pty{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative min-h-[95vh] flex items-center overflow-hidden">
+    <!-- Hero Video Background -->
+    <div class="hero-video-container">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-matrix-background-30048-large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-4xl animate-fade-in">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="w-16 h-16 rounded-2xl border-2 border-neon p-1 glass-card overflow-hidden">
+                    <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Nainno Logo" class="w-full h-full object-cover">
+                </div>
+                <span class="text-neon font-bold tracking-[0.3em] uppercase text-sm">System Status: Active across Eswatini</span>
+            </div>
+            
+            <h1 class="text-6xl md:text-8xl font-bold leading-none mb-8 tracking-tighter">
+                NAINNO <br>
+                <span class="text-neon neon-text">SOLUTIONS</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-slate-300 font-medium mb-6 flex items-center">
+                <span class="w-8 h-[2px] bg-neon mr-4"></span>
+                Empowering Eswatini Through Innovation & Excellence
+            </p>
+            
+            <p class="text-lg text-slate-400 mb-12 max-w-2xl leading-relaxed">
+                A premier multi-division investment powerhouse delivering world-class engineering, digital infrastructure, and essential logistics. We don't just solve problems; we architect the future.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6">
+                <a href="{{ url_for('services') }}" class="btn-primary text-center px-10 py-4 text-lg">Initialize Search</a>
+                <a href="{{ url_for('quote') }}" class="btn-outline text-center px-10 py-4 text-lg">Request Protocol</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Decorative Element -->
+    <div class="absolute bottom-10 right-10 hidden xl:block animate-fade-in" style="animation-delay: 0.5s;">
+        <div class="glass-card border-neon/20 p-6 flex items-center space-x-4">
+            <div class="w-3 h-3 rounded-full bg-neon animate-pulse"></div>
+            <span class="text-xs font-mono tracking-widest text-slate-500 uppercase">Latency: 2ms | Uptime: 99.9%</span>
+        </div>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section class="bg-dark/50 py-32 border-y border-white/5">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8">
+            <div class="max-w-2xl">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">Core <span class="text-neon">Divisions</span></h2>
+                <p class="text-slate-400 text-lg">Diverse expertise, unified excellence. Our specialized teams operate with surgical precision across multiple sectors to drive national growth.</p>
+            </div>
+            <a href="{{ url_for('services') }}" class="text-neon font-bold tracking-widest uppercase text-sm hover:underline mb-4">View All Modules →</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- IT Services -->
+            <div class="glass-card group hover:bg-neon/5">
+                <div class="w-14 h-14 bg-neon/10 border border-neon/20 rounded-xl flex items-center justify-center mb-8 group-hover:border-neon transition-colors">
+                    <svg class="w-8 h-8 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">IT Services</h3>
+                <p class="text-slate-400 mb-8 leading-relaxed">End-to-end IT solutions including server infrastructure, custom software, and managed support.</p>
+                <a href="{{ url_for('service_it') }}" class="text-neon font-semibold hover:underline flex items-center tracking-wider text-sm">
+                    ACCESS MODULE <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+
+            <!-- Logistics -->
+            <div class="glass-card group hover:bg-neon/5">
+                <div class="w-14 h-14 bg-neon/10 border border-neon/20 rounded-xl flex items-center justify-center mb-8 group-hover:border-neon transition-colors">
+                    <svg class="w-8 h-8 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 16v3M8 12h8m-8 4h8m-9 4h10a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Logistics</h3>
+                <p class="text-slate-400 mb-8 leading-relaxed">Reliable freight, warehousing, and supply chain management connecting Eswatini to markets.</p>
+                <a href="{{ url_for('service_logistics') }}" class="text-neon font-semibold hover:underline flex items-center tracking-wider text-sm">
+                    ACCESS MODULE <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+
+            <!-- Cybersecurity -->
+            <div class="glass-card group hover:bg-neon/5">
+                <div class="w-14 h-14 bg-neon/10 border border-neon/20 rounded-xl flex items-center justify-center mb-8 group-hover:border-neon transition-colors">
+                    <svg class="w-8 h-8 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04M12 10a2 2 0 100 4 2 2 0 000-4z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 12c0 4.142 3.358 7.5 7.5 7.5s7.5-3.358 7.5-7.5M12 10v4"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Cyber Security</h3>
+                <p class="text-slate-400 mb-8 leading-relaxed">Protecting organizations from digital threats with advanced audits and response services.</p>
+                <a href="{{ url_for('service_cybersecurity') }}" class="text-neon font-semibold hover:underline flex items-center tracking-wider text-sm">
+                    ACCESS MODULE <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-32">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="animate-fade-in">
+                <h2 class="text-4xl font-bold mb-8 leading-tight">Driving Continental <br><span class="text-neon">Transformation</span></h2>
+                <p class="text-slate-400 text-lg mb-12 max-w-lg">
+                    We combine international standards with deep local knowledge to deliver results that matter. Our commitment to excellence is reflected in every project we undertake.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-12">
+                    <div>
+                        <div class="text-5xl font-bold text-white mb-3">10+</div>
+                        <div class="text-neon uppercase tracking-widest text-xs font-bold">Years of Innovation</div>
+                    </div>
+                    <div>
+                        <div class="text-5xl font-bold text-white mb-3">500+</div>
+                        <div class="text-neon uppercase tracking-widest text-xs font-bold">Success Protocols</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="rounded-3xl overflow-hidden glass-card neon-border h-[500px] border-neon/10">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200" alt="Cyber Grid" class="w-full h-full object-cover grayscale opacity-50">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+                </div>
+                <div class="absolute -bottom-8 -left-8 glass-card border-neon/30 p-8 max-w-sm hidden md:block backdrop-blur-3xl">
+                    <p class="text-lg font-medium text-white italic">"Eswatini's digital future is being built today by Swati hands."</p>
+                    <p class="mt-4 text-xs tracking-widest text-neon uppercase font-bold">- Management Command</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="py-40 bg-neon/10 border-y border-neon/5 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-neon to-transparent opacity-50"></div>
+    <div class="container mx-auto px-6 text-center relative z-10">
+        <h2 class="text-4xl md:text-7xl font-bold mb-10 tracking-tight">System Ready for <span class="text-neon neon-text">Deployment</span></h2>
+        <p class="text-slate-400 max-w-2xl mx-auto text-xl mb-12">Join Eswatini's most versatile investment ecosystem. Let's architect your success together.</p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <a href="{{ url_for('quote') }}" class="btn-primary px-12 py-4">Request Protocol</a>
+            <a href="{{ url_for('contact') }}" class="btn-outline px-12 py-4">Connect Channel</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
